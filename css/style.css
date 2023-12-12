@@ -2,12 +2,20 @@
 h1, h2, h3, h4{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+}
+
+h1{
     font-size: xx-large;
 }
 
 p, nav{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
 }
 
 body {
@@ -76,9 +84,10 @@ nav a:hover{
     color: #D98555;
 }
 
-.home-article{
+article{
     padding: 180px 60px 180px 60px;
     height: fit-content;
+    align-content: center;
 }
 
 footer{
@@ -132,3 +141,135 @@ button:hover{
     background-image: url(https://pictures.dealer.com/f/fullercincinnatifordfd/0739/b5abe83bc380ea85863022c5340ea45cx.jpg);
     background-repeat: repeat-x;
 }
+
+.standard-grid{
+    display: grid;
+    grid-template-columns: 50% auto 40%;
+}
+
+.blurb{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.blurb-img{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-content: center;
+}
+
+.blurb-img img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+p a{
+    color: #59331D;
+}
+
+p a:hover{
+    color: #D98555;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+}
+
+.col-1-img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.col-1-text{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.col-2-img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.col-2-text{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.col-3-img{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.col-3-text{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.product-grid img{
+    width: 70%;
+    border-radius: 8px;
+}
+
+.product-grid div{
+    width: 70%;
+}
+
+
+@media only screen and (max-width: 400px) {
+    header{
+        display: grid;
+        grid-template-rows: 2 1fr;
+        justify-content: center;
+    }
+    .logo {
+        justify-content: center;
+        align-items: center;
+    }
+    .logo img{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    nav{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav a{
+        text-align: center;
+    }
+
+    article{
+        padding: 60px 20px 60px 20px;
+    }
+    .standard-grid{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        overflow: auto;
+    }
+
+    .product-grid{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        overflow: auto;
+        align-content: center;
+        justify-content: center;
+    }
+  }
